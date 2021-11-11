@@ -44,4 +44,41 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/title"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <com.lukelorusso.verticalseekbar.HorizontalSeekBar
+        android:id="@+id/mainHorizontalSeekBar"
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        app:vsb_bar_background="#eeeeee"
+        app:vsb_bar_corner_radius="15dp"
+        app:vsb_bar_width="60dp"
+        app:vsb_bar_progress_gradient_end="#4dd0e1"
+        app:vsb_bar_progress_gradient_start="#03a2ba"
+        app:vsb_click_to_set_progress="true"
+        app:vsb_max_placeholder_position="inside"
+        app:vsb_max_placeholder_src="@drawable/max_placeholder"
+        app:vsb_min_placeholder_position="inside"
+        app:vsb_min_placeholder_src="@drawable/min_placeholder"
+        app:vsb_show_thumb="true"
+        app:vsb_thumb_container_corner_radius="5dp"
+        app:vsb_thumb_container_tint="@color/placeholderBackground"
+        app:vsb_thumb_placeholder_src="@drawable/thumb_placeholder"
+        app:vsb_use_thumb_to_set_progress="true" />
+
+    <TextView
+        android:id="@+id/mainProgressValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp" />
+
+
 </LinearLayout>

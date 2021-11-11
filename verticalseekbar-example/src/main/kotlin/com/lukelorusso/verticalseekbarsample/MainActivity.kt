@@ -31,6 +31,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.mainProgressValue.text = binding.mainVerticalSeekBar.progress.toString()
+
+        binding.mainHorizontalSeekBar.apply {
+            progress = 75
+
+            setOnProgressChangeListener { progressValue ->
+                Log.d("HorizontalSeekBar", "PROGRESS CHANGED at value: $progressValue")
+                binding.mainProgressValue2.text = progressValue.toString()
+            }
+
+            setOnPressListener { progressValue ->
+                Log.d("HorizontalSeekBar", "PRESSED at value: $progressValue")
+            }
+
+            setOnReleaseListener { progressValue ->
+                Log.d("HorizontalSeekBar", "RELEASED at value: $progressValue")
+            }
+        }
+
+        binding.mainProgressValue2.text = binding.mainHorizontalSeekBar.progress.toString()
     }
 
 }
